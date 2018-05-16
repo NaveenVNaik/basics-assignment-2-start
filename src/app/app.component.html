@@ -4,3 +4,30 @@
   <li>Add a button which may only be clicked if the username is NOT an empty string</li>
   <li>Upon clicking the button, the username should be reset to an empty string</li>
 </ol>
+<hr>
+<div class="p-2 m-3">
+  <!-- My solution -->
+  <!-- <label>Enter User Name:</label>
+  <div class="row">
+    <div class="col-2">
+      <input type="text" class="form-control" [(ngModel)]="userName"/><br>
+    </div>
+  </div>
+  <p>Entered user name is {{ userName }}</p>
+  <button class="btn btn-primary" [disabled]="!getUserNameStatus()" (click)="userName=''">
+    Reset UserName
+  </button> -->
+
+  <!-- solution from  instructor-->
+  <label>Username</label>
+  <div class="row">
+    <div class="col-2">
+      <input type="text" class="form-control" [(ngModel)]="userName">
+    </div>
+  </div>
+  <p>{{ userName }}</p>
+  <button class="btn btn-primary" [disabled]="userName === ''" (click)="userName = ''">
+    Reset User
+  </button>
+
+</div>
